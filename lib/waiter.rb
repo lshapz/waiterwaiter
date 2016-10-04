@@ -12,15 +12,20 @@ def initialize(name:, restaurant:)
 
 end 
 
+#creates a new waiter, who has to deal with customers and orders, and knows where she works 
+
 def self.all
   @@all
 end 
+#lists all your waiters 
 
 def waiter_total
    @total_sales = 0
   self.customers.each {|customer| customer.order.each {|item| @total_sales += item.price }}
   @total_sales
 end   
+
+#lists the waiter's sales for the day / so far 
 
 # def customer
 #   @customer = customer

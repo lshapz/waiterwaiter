@@ -6,10 +6,12 @@ def initialize(name)
   @name = name 
   @@all << self 
 end 
+#creates a new hungry human
 
 def self.all
   @@all
 end 
+#lists all hungry humans 
 
 def has_ordered?(item_to_check)
   if item_to_check.class == Item
@@ -18,6 +20,8 @@ def has_ordered?(item_to_check)
     false
   end 
 end 
+#checks to see if the hungry guy ordered nachos or pizza or what 
+
 
 def table_mates
   my_table_mates = @table_mates.reject {|x| x == self.name}
@@ -26,6 +30,8 @@ def table_mates
 #bill1.table_mates.reject {|x| x.delete_if {|x, y| y == bob.name}}
 #bill2.table_mates.reject! {|x| x.reject! {|y| y == bob.name}}
 end 
+
+#lists who was at the table / splitting the bill with HHuman 
 
 # #
 # def waiter 
